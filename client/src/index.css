@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Custom styles */
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply bg-slate-950 text-white antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-slate-900/80 backdrop-blur-xl border border-white/[0.08] rounded-2xl p-6 transition-all duration-300;
+  }
+
+  .glass-card:hover {
+    @apply border-white/[0.12] -translate-y-0.5;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 hover:bg-blue-600 text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30;
+  }
+
+  .btn-secondary {
+    @apply bg-white/5 hover:bg-white/10 text-white border border-white/[0.08] font-semibold px-5 py-3 rounded-xl transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full bg-white/5 border border-white/[0.08] rounded-xl px-4 py-3 text-white placeholder-gray-400 outline-none transition-all duration-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30;
+  }
+}
